@@ -19,6 +19,7 @@ namespace UI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //this is player one
             Player Player1 = new Player();
             label1.Text = Player1.DisplayPlayer();
         }
