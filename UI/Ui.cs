@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,29 +8,38 @@ namespace UI
 {
     class Ui
     {
-    
 
-        
+
+
     }
-    public class Player {
+    public class Player
+    {
         public String DisplayPlayer(/*gameLocation, playerobject*/)
         {
             //displays the player on the screen in the given location
             return "Player";
         }
-        public int DisplayHS(/*HighScore, Score*/)
+        public String DisplayHS(int HighScore, int Score)
         {
-            //when tab is hit a popup apear on screen displaying the current score and highScore
-            int HS = 1000;
+            String HS = "" + HighScore;
+
             return HS;
         }
-        public void DisplayTrivia(/*TriviaQs*/)
+        public String DisplayTrivia(bool display, String TriviaQs)
         {
-            //Displays the trivia questions
+            if (display)
+            {
+                return TriviaQs;
+            }
+            return null;
         }
-        public void DisplayWumpus(/*Wumpus*/)
+        public String DisplayWumpus(int[][] WumpusLocation, int[][] location, String Wumpus)
         {
-            //When player encounters wumpus the wumpous is displayed on screen.
+            if (Math.Sqrt(location[0][0] * location[0][0] + WumpusLocation[0][0] * WumpusLocation[0][0]) < 2)
+            {
+                return Wumpus;
+            }
+            return null;
         }
     }
 
