@@ -15,6 +15,7 @@ namespace UI
         public Form1()
         {
             InitializeComponent();
+            button1.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,6 +23,11 @@ namespace UI
             //this is player one
             Player Player1 = new Player();
             label1.Text = Player1.DisplayPlayer();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
         }
     }
 }
